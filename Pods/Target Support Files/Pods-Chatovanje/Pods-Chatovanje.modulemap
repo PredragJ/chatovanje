@@ -1,0 +1,6 @@
+framework module Pods_Chatovanje {
+  umbrella header "Pods-Chatovanje-umbrella.h"
+
+  export *
+  module * { export * }
+}
