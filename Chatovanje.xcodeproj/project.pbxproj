@@ -9,18 +9,18 @@
 /* Begin PBXBuildFile section */
 		515AF48DF53AC553F118D48D /* Pods_Chatovanje.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B3E0AD644588D5D669A6B0 /* Pods_Chatovanje.framework */; };
 		8785CC1B203EFAC20004F840 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8785CC1A203EFAC20004F840 /* AppDelegate.swift */; };
-		8785CC1D203EFAC20004F840 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8785CC1C203EFAC20004F840 /* ViewController.swift */; };
 		8785CC20203EFAC20004F840 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8785CC1E203EFAC20004F840 /* Main.storyboard */; };
 		8785CC22203EFAC20004F840 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8785CC21203EFAC20004F840 /* Assets.xcassets */; };
 		8785CC25203EFAC20004F840 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8785CC23203EFAC20004F840 /* LaunchScreen.storyboard */; };
 		8785CC30203F04E50004F840 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8785CC2E203F04E50004F840 /* SWRevealViewController.m */; };
+		8785CC35203F0AF00004F840 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8785CC34203F0AF00004F840 /* ChatVC.swift */; };
+		8785CC37203F0AFD0004F840 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8785CC36203F0AFD0004F840 /* ChannelVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		21C497BA094A6955CAD56C2E /* Pods-Chatovanje.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatovanje.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatovanje/Pods-Chatovanje.release.xcconfig"; sourceTree = "<group>"; };
 		8785CC17203EFAC20004F840 /* Chatovanje.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatovanje.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8785CC1A203EFAC20004F840 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8785CC1C203EFAC20004F840 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8785CC1F203EFAC20004F840 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8785CC21203EFAC20004F840 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8785CC24203EFAC20004F840 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +28,8 @@
 		8785CC2D203F04E30004F840 /* Chatovanje-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chatovanje-Bridging-Header.h"; sourceTree = "<group>"; };
 		8785CC2E203F04E50004F840 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		8785CC2F203F04E50004F840 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		8785CC34203F0AF00004F840 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		8785CC36203F0AFD0004F840 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		89B3E0AD644588D5D669A6B0 /* Pods_Chatovanje.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatovanje.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A14C404D089E3A543DC0D9 /* Pods-Chatovanje.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatovanje.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chatovanje/Pods-Chatovanje.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,8 +77,10 @@
 		8785CC19203EFAC20004F840 /* Chatovanje */ = {
 			isa = PBXGroup;
 			children = (
+				8785CC31203F0ABA0004F840 /* Model */,
+				8785CC33203F0ACD0004F840 /* View */,
+				8785CC32203F0AC10004F840 /* Controller */,
 				8785CC1A203EFAC20004F840 /* AppDelegate.swift */,
-				8785CC1C203EFAC20004F840 /* ViewController.swift */,
 				8785CC1E203EFAC20004F840 /* Main.storyboard */,
 				8785CC21203EFAC20004F840 /* Assets.xcassets */,
 				8785CC23203EFAC20004F840 /* LaunchScreen.storyboard */,
@@ -93,6 +97,29 @@
 				8785CC2D203F04E30004F840 /* Chatovanje-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8785CC31203F0ABA0004F840 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8785CC32203F0AC10004F840 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8785CC34203F0AF00004F840 /* ChatVC.swift */,
+				8785CC36203F0AFD0004F840 /* ChannelVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8785CC33203F0ACD0004F840 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9F0E78289ACE2EB5B56DEDF2 /* Frameworks */ = {
@@ -239,7 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8785CC1D203EFAC20004F840 /* ViewController.swift in Sources */,
+				8785CC37203F0AFD0004F840 /* ChannelVC.swift in Sources */,
+				8785CC35203F0AF00004F840 /* ChatVC.swift in Sources */,
 				8785CC1B203EFAC20004F840 /* AppDelegate.swift in Sources */,
 				8785CC30203F04E50004F840 /* SWRevealViewController.m in Sources */,
 			);
