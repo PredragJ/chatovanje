@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -37,7 +42,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Rp-7f-tbU">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Rp-7f-tbU" customClass="GradiendView" customModule="Chatovanje" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="77"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8je-53-ddL">
@@ -85,19 +90,73 @@
         <scene sceneID="IB2-gg-B4Q">
             <objects>
                 <viewController id="a4r-UJ-IM9" customClass="ChannelVC" customModule="Chatovanje" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6in-5d-w3b">
+                    <view key="view" contentMode="scaleToFill" id="6in-5d-w3b" customClass="GradiendView" customModule="Chatovanje" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chatovanje" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6r-w4-wzL">
+                                <rect key="frame" x="10" y="44" width="103" height="23"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANNELS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aos-RA-A5l">
+                                <rect key="frame" x="10" y="87" width="106" height="23"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELG-8m-EUT">
+                                <rect key="frame" x="281" y="87.5" width="22" height="22"/>
+                                <state key="normal" image="addChannelButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UkQ-rf-9wd">
+                                <rect key="frame" x="105" y="592.5" width="48" height="34"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="HPn-la-WBu">
+                                <rect key="frame" x="10" y="572" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="h4G-LK-h4Q"/>
+                                    <constraint firstAttribute="width" constant="75" id="v8b-Qq-tii"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NZk-4y-U0K">
+                                <rect key="frame" x="0.0" y="130" width="375" height="422"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UkQ-rf-9wd" firstAttribute="centerY" secondItem="HPn-la-WBu" secondAttribute="centerY" id="3PO-8B-fKZ"/>
+                            <constraint firstItem="ELG-8m-EUT" firstAttribute="centerY" secondItem="Aos-RA-A5l" secondAttribute="centerY" id="9De-c8-mUr"/>
+                            <constraint firstItem="Aos-RA-A5l" firstAttribute="top" secondItem="z6r-w4-wzL" secondAttribute="bottom" constant="20" id="Af7-kw-NgR"/>
+                            <constraint firstItem="UkQ-rf-9wd" firstAttribute="leading" secondItem="HPn-la-WBu" secondAttribute="trailing" constant="20" id="K6s-wS-mao"/>
+                            <constraint firstItem="o33-FK-MgT" firstAttribute="bottom" secondItem="HPn-la-WBu" secondAttribute="bottom" constant="20" id="NBr-cQ-pAQ"/>
+                            <constraint firstItem="z6r-w4-wzL" firstAttribute="top" secondItem="o33-FK-MgT" secondAttribute="top" constant="24" id="Nla-3D-P8Q"/>
+                            <constraint firstItem="HPn-la-WBu" firstAttribute="top" secondItem="NZk-4y-U0K" secondAttribute="bottom" constant="20" id="V0u-x8-yiY"/>
+                            <constraint firstItem="Aos-RA-A5l" firstAttribute="leading" secondItem="o33-FK-MgT" secondAttribute="leading" constant="10" id="kTm-Br-BPc"/>
+                            <constraint firstItem="NZk-4y-U0K" firstAttribute="trailing" secondItem="o33-FK-MgT" secondAttribute="trailing" id="npA-0s-a9Q"/>
+                            <constraint firstItem="o33-FK-MgT" firstAttribute="trailing" secondItem="ELG-8m-EUT" secondAttribute="trailing" constant="72" id="qxC-E2-by5"/>
+                            <constraint firstItem="NZk-4y-U0K" firstAttribute="leading" secondItem="o33-FK-MgT" secondAttribute="leading" id="r6r-0K-3pd"/>
+                            <constraint firstItem="z6r-w4-wzL" firstAttribute="leading" secondItem="o33-FK-MgT" secondAttribute="leading" constant="10" id="rZQ-tk-mAe"/>
+                            <constraint firstItem="NZk-4y-U0K" firstAttribute="top" secondItem="Aos-RA-A5l" secondAttribute="bottom" constant="20" id="tJa-ra-Iel"/>
+                            <constraint firstItem="HPn-la-WBu" firstAttribute="leading" secondItem="o33-FK-MgT" secondAttribute="leading" constant="10" id="yOO-Tg-5a0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="o33-FK-MgT"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wky-0G-lzb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1025" y="-341"/>
+            <point key="canvasLocation" x="1024.8" y="-341.37931034482762"/>
         </scene>
     </scenes>
     <resources>
+        <image name="addChannelButton" width="22" height="22"/>
+        <image name="menuProfileIcon" width="99" height="99"/>
         <image name="smackBurger" width="40" height="40"/>
     </resources>
 </document>
